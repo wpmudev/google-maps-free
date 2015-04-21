@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/566891/wordpress-google-maps/trunk/lib
+END
+class_agm_admin_form_renderer.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/566891/wordpress-google-maps/trunk/lib/class_agm_admin_form_renderer.php
+END
+class_agm_maps_widget.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/439064/wordpress-google-maps/trunk/lib/class_agm_maps_widget.php
+END
+class_agm_admin_maps.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/566891/wordpress-google-maps/trunk/lib/class_agm_admin_maps.php
+END
+class_agm_plugin_installer.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/475751/wordpress-google-maps/trunk/lib/class_agm_plugin_installer.php
+END
+class_agm_map_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/439064/wordpress-google-maps/trunk/lib/class_agm_map_model.php
+END
+class_agm_marker_replacer.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/566891/wordpress-google-maps/trunk/lib/class_agm_marker_replacer.php
+END
+class_agm_plugins_handler.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/475751/wordpress-google-maps/trunk/lib/class_agm_plugins_handler.php
+END
+class_agm_user_maps.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/566891/wordpress-google-maps/trunk/lib/class_agm_user_maps.php
+END
