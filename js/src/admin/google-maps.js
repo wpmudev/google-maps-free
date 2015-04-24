@@ -1,6 +1,4 @@
-/*! Google Maps Free - v2.5.4
- * https://wordpress.org/plugins/wordpress-google-maps/
- * Copyright (c) 2015; * Licensed GPLv2+ */
+/*global jQuery:false */
 /*global window:false */
 /*global document:false */
 /*global _agm:false */
