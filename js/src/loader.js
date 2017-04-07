@@ -29,7 +29,11 @@ function loadGoogleMaps () {
 	try { protocol = document.location.protocol; } catch (e) { protocol = 'http:'; }
 	var script = document.createElement("script");
 	script.type = "text/javascript";
-	script.src = protocol + "//maps.google.com/maps/api/js?v=3&libraries=panoramio&sensor=false&callback=agmInitialize";
+	var api_key = _agm_api_key;
+	if (api_key) {
+		api_key = "&key=" + api_key;
+	}
+	script.src = protocol + "//maps.google.com/maps/api/js?v=3" + api_key + "&libraries=panoramio&sensor=false&callback=agmInitialize";
 	document.body.appendChild(script);
 }
 

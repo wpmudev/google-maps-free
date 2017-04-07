@@ -27,6 +27,7 @@ class AgmAdminMaps {
 		$form = new AgmAdminFormRenderer;
 
 		add_settings_section('agm_google_maps', __('Options', 'agm_google_maps'), create_function('', ''), 'agm_google_maps_options_page');
+		add_settings_field('agm_google_maps_default_map_api_key', __('Google maps API key', 'agm_google_maps'), array($form, 'create_map_api_key_box'), 'agm_google_maps_options_page', 'agm_google_maps');
 		add_settings_field('agm_google_maps_default_height', __('Default map height', 'agm_google_maps'), array($form, 'create_height_box'), 'agm_google_maps_options_page', 'agm_google_maps');
 		add_settings_field('agm_google_maps_default_width', __('Default map width', 'agm_google_maps'), array($form, 'create_width_box'), 'agm_google_maps_options_page', 'agm_google_maps');
 		add_settings_field('agm_google_maps_default_map_type', __('Default map type', 'agm_google_maps'), array($form, 'create_map_type_box'), 'agm_google_maps_options_page', 'agm_google_maps');
@@ -68,9 +69,11 @@ class AgmAdminMaps {
 	 * Introduces plugins_url() as root variable (global).
 	 */
 	function js_plugin_url () {
+		$opt = apply_filters( 'agm_google_maps-options', get_option( 'agm_google_maps' ) );
+		$map_api_key = !empty($opt['map_api_key']) ? $opt['map_api_key'] : '';
 		printf(
-			'<script type="text/javascript">var _agm_root_url="%s"; var _agm_is_multisite=%d;</script>',
-			AGM_PLUGIN_URL, (int)is_multisite()
+			'<script type="text/javascript">var _agm_root_url="%s"; var _agm_is_multisite=%d; var _agm_api_key="%s";</script>',
+			AGM_PLUGIN_URL, (int)is_multisite(), $map_api_key
 		);
 	}
 
@@ -102,7 +105,7 @@ class AgmAdminMaps {
 
 	function js_widget_editor () {
 		wp_enqueue_script('thickbox');
-		wp_enqueue_script('jquery-ui-dialog');
+		
 		wp_enqueue_script('agm_editor', AGM_PLUGIN_URL . '/js/widget_editor.js', array('jquery'));
 		wp_localize_script('agm_editor', 'l10nEditor', array(
 			'add_map' => __('Add Map', 'agm_google_maps'),
@@ -115,6 +118,7 @@ class AgmAdminMaps {
 	 * Include Google Maps dependencies.
 	 */
 	function js_google_maps_api () {
+		wp_enqueue_script('jquery-ui-dialog');
 		wp_enqueue_script('google_maps_api', AGM_PLUGIN_URL . '/js/google_maps_loader.js');
 
 		wp_enqueue_script('google_maps_admin', AGM_PLUGIN_URL . '/js/google_maps_admin.js', array('jquery'));
