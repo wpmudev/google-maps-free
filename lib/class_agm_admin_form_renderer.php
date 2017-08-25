@@ -40,6 +40,26 @@ class AgmAdminFormRenderer {
 		}
 		echo "</select>";
 	}
+
+	public function create_map_api_key_box() {
+		$opt = apply_filters( 'agm_google_maps-options', get_option( 'agm_google_maps' ) );
+		$value = (isset($opt['map_api_key']) && !empty($opt['map_api_key']))
+			? $opt['map_api_key']
+			: ''
+		;
+
+		echo '<input type="text" class="widefat" name="agm_google_maps[map_api_key]" value="' . esc_attr($value) . '"> ';
+		printf(
+			__('Get your API key <a href="%s" target="_blank">here</a>', AGM_LANG),
+			esc_url('https://console.developers.google.com/flows/enableapi?apiid=maps_backend,geocoding_backend,directions_backend,distance_matrix_backend,elevation_backend&keyType=CLIENT_SIDE&reusekey=true')
+		);
+		echo ' ';
+		printf(
+			__('(you can also research a bit more in <a href="%s" target="_blank">official Google documentation</a> pages)', AGM_LANG),
+			esc_url('https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key')
+		);
+	}
+
 	function  create_map_zoom_box () {
 		$opt = get_option('agm_google_maps');
 		$items = array(

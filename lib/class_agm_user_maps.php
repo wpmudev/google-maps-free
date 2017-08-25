@@ -44,9 +44,11 @@ class AgmUserMaps {
 	 * Introduces plugins_url() as root variable (global).
 	 */
 	function js_plugin_url () {
+		$opt = apply_filters( 'agm_google_maps-options', get_option( 'agm_google_maps' ) );
+		$map_api_key = !empty($opt['map_api_key']) ? $opt['map_api_key'] : '';
 		printf(
-			'<script type="text/javascript">var _agm_root_url="%s"; var _agm_ajax_url="%s"</script>',
-			AGM_PLUGIN_URL, admin_url('admin-ajax.php')
+			'<script type="text/javascript">var _agm_root_url="%s"; var _agm_ajax_url="%s"; var _agm_api_key="%s"; </script>',
+			AGM_PLUGIN_URL, admin_url('admin-ajax.php'), $map_api_key
 		);
 	}
 
