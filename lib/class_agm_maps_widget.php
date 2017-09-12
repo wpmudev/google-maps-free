@@ -68,6 +68,21 @@ class AgmMapsWidget extends WP_Widget {
 
 	function update($new_instance, $old_instance) {
 		$instance = $old_instance;
+		$new_instance = wp_parse_args($new_instance, array(
+			'title' => '',
+			'height' => '',
+			'width' => '',
+			'query' => '',
+			'query_custom' => '',
+			'network' => '',
+			'map_id' => '',
+			'show_as_one' => '',
+			'show_map' => '',
+			'show_markers' => '',
+			'show_images' => '',
+			'show_posts' => '',
+			'zoom' => '',
+		));
 		$instance['title'] = strip_tags($new_instance['title']);
 		$instance['height'] = strip_tags($new_instance['height']);
 		$instance['width'] = strip_tags($new_instance['width']);
