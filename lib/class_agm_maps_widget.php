@@ -5,24 +5,40 @@
  */
 class AgmMapsWidget extends WP_Widget {
 	function AgmMapsWidget() {
-		parent::WP_Widget(false, $name = 'Google Maps Widget');
+		//parent::WP_Widget(false, $name = 'Google Maps Widget');
+		parent::__construct(false, $name = 'Google Maps Widget');
 		$this->model = new AgmMapModel();
 	}
 
 	function form($instance) {
-		$title = esc_attr($instance['title']);
-		$height = esc_attr($instance['height']);
-		$width = esc_attr($instance['width']);
-		$query = esc_attr($instance['query']);
-		$query_custom = esc_attr($instance['query_custom']);
-		$network = esc_attr($instance['network']);
-		$map_id = esc_attr($instance['map_id']);
-		$show_as_one = esc_attr($instance['show_as_one']);
-		$show_map = esc_attr($instance['show_map']);
-		$show_markers = esc_attr($instance['show_markers']);
-		$show_images = esc_attr($instance['show_images']);
-		$show_posts = esc_attr($instance['show_posts']);
-		$zoom = esc_attr($instance['zoom']);
+		$parsed = wp_parse_args($instance, array(
+			'title' => '',
+			'height' => '',
+			'width' => '',
+			'query' => '',
+			'query_custom' => '',
+			'network' => '',
+			'map_id' => '',
+			'show_as_one' => '',
+			'show_map' => '',
+			'show_markers' => '',
+			'show_images' => '',
+			'show_posts' => '',
+			'zoom' => '',
+		));
+		$title = esc_attr($parsed['title']);
+		$height = esc_attr($parsed['height']);
+		$width = esc_attr($parsed['width']);
+		$query = esc_attr($parsed['query']);
+		$query_custom = esc_attr($parsed['query_custom']);
+		$network = esc_attr($parsed['network']);
+		$map_id = esc_attr($parsed['map_id']);
+		$show_as_one = esc_attr($parsed['show_as_one']);
+		$show_map = esc_attr($parsed['show_map']);
+		$show_markers = esc_attr($parsed['show_markers']);
+		$show_images = esc_attr($parsed['show_images']);
+		$show_posts = esc_attr($parsed['show_posts']);
+		$zoom = esc_attr($parsed['zoom']);
 
 		// Set defaults
 		$height = $height ? $height : 200;
