@@ -52,6 +52,8 @@ $textdomain_handler('agm_google_maps', false, AGM_PLUGIN_SELF_DIRNAME . '/langua
 // Post Indexer (http://premium.wpmudev.org/project/post-indexer) integration
 define ('AGM_USE_POST_INDEXER', function_exists('post_indexer_make_current'), true);
 
+if (!defined('AGM_LANG')) define('AGM_LANG', 'agm_google_maps');
+
 require_once AGM_PLUGIN_BASE_DIR . '/lib/class_agm_map_model.php';
 require_once AGM_PLUGIN_BASE_DIR . '/lib/class_agm_maps_widget.php';
 
