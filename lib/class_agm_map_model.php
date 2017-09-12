@@ -447,7 +447,7 @@ class AgmMapModel {
 				$map['markers'] = is_array($map['markers']) ? $map['markers'] : array();
 				if (in_array($marker, $map['markers'])) {
 					$post_ids = array_merge($post_ids, $map['post_ids']);
-					$new_markers[$mid]['post_ids'] = is_array($new_markers[$mid]['post_ids']) ? array_merge($new_markers[$mid]['post_ids'], $post_ids) : $post_ids;
+					$new_markers[$mid]['post_ids'] = isset($new_markers[$mid]['post_ids']) && is_array($new_markers[$mid]['post_ids']) ? array_merge($new_markers[$mid]['post_ids'], $post_ids) : $post_ids;
 				}
 			}
 		}
