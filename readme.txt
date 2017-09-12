@@ -3,7 +3,7 @@ Contributors: WPMUDEV
 Tags: Maps, google maps, Geo tag, gps, KML Overlay, KML Uploader, Map Custom Icon, multisite mapping, Responsive Maps,Traffic Overlay, User Checkins,
 Requires at least: 3.1
 Tested up to: 4.1
-Stable tag: 2.5.4
+Stable tag: 2.5.5
 
 Easily embed and customize Google maps on your WordPress site - in posts, pages or as an easy to use widget.
 

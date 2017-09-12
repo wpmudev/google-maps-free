@@ -1,4 +1,4 @@
-/*! Google Maps - v2.5.4
+/*! Google Maps - v2.5.5
  * https://wordpress.org/plugins/wordpress-google-maps/
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /*global window:false */
