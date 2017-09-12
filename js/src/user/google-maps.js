@@ -438,7 +438,7 @@ var AgmPanoramioHandler = function (map, $container, limit, size) {
 			images = data.photos;
 		};
 		var script = document.createElement("script");
-		var src = 'http://www.panoramio.com/map/get_panoramas.php?set=full&from=0&to=' + limit +
+		var src = '//www.panoramio.com/map/get_panoramas.php?set=full&from=0&to=' + limit +
 			'&miny=' + bounds.getSouthWest().lat() + '&minx=' + bounds.getSouthWest().lng() +
 			'&maxy=' + bounds.getNorthEast().lat() + '&maxx=' + bounds.getNorthEast().lng() +
 			'&size=' + size +

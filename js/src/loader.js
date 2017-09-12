@@ -29,7 +29,7 @@ function loadGoogleMaps () {
 	try { protocol = document.location.protocol; } catch (e) { protocol = 'http:'; }
 	var script = document.createElement("script");
 	script.type = "text/javascript";
-	var api_key = _agm_api_key;
+	var api_key = window._agm_api_key;
 	if (api_key) {
 		api_key = "&key=" + api_key;
 	}
