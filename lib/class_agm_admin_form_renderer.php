@@ -176,7 +176,7 @@ class AgmAdminFormRenderer {
 	}
 	function create_custom_fields_options_box () {
 		$opt = get_option('agm_google_maps');
-		$opt = $opt['custom_fields_options'];
+		$opt = !empty($opt['custom_fields_options']) ? $opt['custom_fields_options'] : array();
 		echo "<div><small>" . __("(A new map will be automatically created, using the defaults you specified above)", 'agm_google_maps') . "</small></div>";
 		echo __("Associate the new map to post:", 'agm_google_maps') . ' ' . $this->_create_cfyn_box('associate_map', @$opt['associate_map']) . '<br />';
 		echo __("Automatically show the map:", 'agm_google_maps') . ' ' . $this->_create_cfyn_box('autoshow_map', @$opt['autoshow_map']) . '<br />';
