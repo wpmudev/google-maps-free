@@ -1,4 +1,4 @@
-=== Google Maps All In One ===
+=== Google Maps ===
 Contributors: WPMUDEV
 Tags: Maps, google maps, Geo tag, gps, KML Overlay, KML Uploader, Map Custom Icon, multisite mapping, Responsive Maps,Traffic Overlay, User Checkins,
 Requires at least: 3.1
@@ -25,7 +25,7 @@ Here are some of the features you'll get in the premium version available at <a 
 
 * Unlimited number of maps
 * Plugin options for maps default values
-* Advanced options for Maps 
+* Advanced options for Maps
 * No links in generated maps, ever
 
 <a href='http://premium.wpmudev.org/project/wordpress-google-maps-plugin/'>**Upgrade to the full version now &raquo;**</a>
@@ -34,7 +34,7 @@ Display local images and let your site visitors get directions in seconds!  Get 
 
 Easily display multiple maps in a single post or page with our advanced controls including shorcodes with IDs as well as control the width and height!  Add multiple markers to any map!
 
-This plugin has a host of features.  Don't see something you like?  WPMU DEV Members have the ability to ask for feature requests in the <a href='http://premium.wpmudev.org/forums/forum/feature-suggestions/'>forums!</a>  
+This plugin has a host of features.  Don't see something you like?  WPMU DEV Members have the ability to ask for feature requests in the <a href='http://premium.wpmudev.org/forums/forum/feature-suggestions/'>forums!</a>
 
 <a href='http://premium.wpmudev.org/project/wordpress-google-maps-plugin/'>**Sign up and submit your request today!**</a>
 
@@ -52,7 +52,7 @@ This plugin has a host of features.  Don't see something you like?  WPMU DEV Mem
 
 == Screenshots ==
 
-1. Google Maps options page in Settings	
+1. Google Maps options page in Settings
 2. Creating a map using the Add Map window
 3. Map options when embedding a Google Map
 4. The Google Maps Widget
@@ -68,7 +68,7 @@ What else could I get in the premium version?
 
 * Unlimited number of maps
 * Plugin options for maps default values
-* Advanced options for Maps 
+* Advanced options for Maps
 * No links in generated maps, ever
 
 <a href='http://premium.wpmudev.org/project/wordpress-google-maps-plugin/'>**Upgrade to the full version now &raquo;**</a>
