@@ -59,7 +59,7 @@ require_once AGM_PLUGIN_BASE_DIR . '/lib/class_agm_plugins_handler.php';
 AgmPluginsHandler::init();
 
 require_once AGM_PLUGIN_BASE_DIR . '/lib/class_agm_plugin_installer.php';
-register_activation_hook(__FILE__, array(AgmPluginInstaller, 'install'));
+register_activation_hook(__FILE__, array('AgmPluginInstaller', 'install'));
 AgmPluginInstaller::check();
 
 add_action('widgets_init', create_function('', "register_widget('AgmMapsWidget');"));
